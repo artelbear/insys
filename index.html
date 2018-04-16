@@ -22,19 +22,13 @@
             var db = firebase.firestore();
         </script>
     </head>
-    <body>
-        
-        <div v-if="seen" id="visitsinformation">
-            <pre>{{ message }}</pre>
-        </div>
-
-        <header class="d-flex w-100 bg-primary flex-column">
+    <body class="bg-light">
+        <header class="d-flex w-100 bg-secondary flex-column">
             <h1 class="m-3 text-white">Пространство ИС</h1>
         </header>
-        <div class="d-flex w-100 flex-wrap flex-row">
-            <section class="d-flex w-100 p-3 flex-column ">
+        <div class="d-flex w-100 flex-wrap flex-row">   
+            <section class="d-flex w-25 p-3 flex-column">
                 <div id="today" class="card m-1">
-                    <img class="card-img-top" src="https://source.unsplash.com/1600x1000/?Apple" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{ pair }}</h5>
                         <p class="card-text"><pre>{{ rasp }}</pre></p>
@@ -48,8 +42,17 @@
                 </div>
                 <button id="alarm" v-if="seen" class="btn btn-primary mx-5 my-2" v-on:click="greet">Предупредить</button>
             </section>
+            <section class="d-flex w-25 p-3 flex-column">
+            </section>
+            <section class="d-flex w-25 p-3 flex-column">
+            </section>
+            <section class="d-flex w-25 p-3 flex-column">
+                <div v-if="seen" id="visitsinformation">
+                    <pre>{{ message }}</pre>
+                </div>
+            </section>
         </div>
-        <footer class="d-flex w-100 bg-info p-2 pb-5 flex-columnsd">
+        <footer class="d-flex w-100 bg-secondary p-2 pb-5 flex-columnsd">
             <a class="text-secondary fixed-bottom" onclick="visitsinformation.seen = !visitsinformation.seen; alarm.seen = !alarm.seen;">i</a>
             <a href="https://vk.com/id276829154" class="link text-light">by Kiselev Nikolay</a>
         </footer>
