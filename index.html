@@ -34,6 +34,46 @@
                         <p class="card-text text-muted small">Староста Киселев Николай
                         <br>
                         89689327261</p>
+                        <div id="loadster">
+                            <a v-if="!active" @click="toggle" class="btn btn-link" role="button" href="#loadster">Материалы</a>
+                            <ol v-if="active">
+                                <li>
+                                    <a class="small" href="toad/КГ_Практикум_1.pdf">
+                                        КГ_Практикум_1.pdf
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="small" href="toad/КГ_Практикум_2.pdf">
+                                        КГ_Практикум_2.pdf
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="small" href="toad/Конспект-лекций-по-КГ.docx">
+                                        Конспект-лекций-по-КГ.docx
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="small" href="toad/Конспект-лекций-по-компьютерной-графике.docx">
+                                        Конспект-лекций-по-компьютерной-графике.docx
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="small" href="toad/Копьютерные-сети.doc">
+                                        Копьютерные-сети.doc
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="small" href="toad/Методуказания-к-курсовой-ОП.03-Компьютерные-сети.docx">
+                                        Методуказания-к-курсовой-ОП.03-Компьютерные-сети.docx
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="small" href="toad/Устройство-и-функционирование-ИС.docx">
+                                        Устройство-и-функционирование-ИС.docx
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
                         <button id="alarm" v-if="seen" class="btn btn-primary mx-5 my-2" v-on:click="greet">Предупредить</button>
                     </div>
                 </div>

@@ -111,7 +111,7 @@ var raspis = new Vue({
     }
 })
 
-let xut = 0
+let xut = 0;
 
 function reblock() {
     xut += 1
@@ -120,3 +120,16 @@ function reblock() {
         alarm.seen = !alarm.seen;
     }
 }
+
+var loadster = new Vue({
+  el: '#loadster',
+  data: {
+    active: false,
+    name: "zagr"
+  },
+  methods: {
+    toggle: function() {
+        this.active = !this.active;
+    }
+  }
+});
